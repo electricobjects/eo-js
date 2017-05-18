@@ -65,7 +65,7 @@ For example:
 
 We recommend using the latest version of [Google Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/Home) (what the EO devices run) to test Connected Art pieces in your development environment.
 
-When testing on your own computer, a JWT is not provided. For convenience, we automatically return sample data when the JWT is not present.
+When testing on your own computer, a JWT is not provided. For convenience, we automatically return sample data when a JWT is missing.
 
 
 
