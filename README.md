@@ -51,11 +51,11 @@ The data object returned by `fetchDeviceInfo()` gives you an object formatted li
 
 When your web-based Connected Art is displayed on the EO device, the EO backend appends a JSON Web Token as a parameter of the URL. For example:
 
-**Original Connected Art URL:**
+**Original URL:**
 
 `https://example.com/my-connected-art-piece`
 
-**Connected Art URL when displayed on the EO device:** 
+**URL when displayed on the EO device:** 
 
 `https://example.com/my-connected-art-piece?eo_device_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ`
 
