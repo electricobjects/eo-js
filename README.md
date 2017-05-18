@@ -3,6 +3,11 @@
 Electric Objects' Javascript library for building Connected Art
 
 
+## Demo
+
+[https://electricobjects.github.io/eo-js/index.html](https://electricobjects.github.io/eo-js/index.html)
+
+
 ## Usage
 
 Add the script tag in the `<head>` or `<body>` of your HTML.
