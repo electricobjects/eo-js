@@ -30,8 +30,7 @@ ElectricObjects.fetchDeviceInfo = function(sample) {
     })
         .then(function(response) {
             if (response.status !== 200) {
-                console.error('Error fetching device info: ' + response.status);  
-                return;
+                throw new Error('Error fetching device info. Server resonded with a ' + response.status);
             }
 
             return response.json();
