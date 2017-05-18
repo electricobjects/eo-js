@@ -2,20 +2,17 @@
 
 var ElectricObjects = {};
 
-ElectricObjects.fetchDeviceInfo = function(sample) {
-    sample = Boolean(sample);
-
+ElectricObjects.fetchDeviceInfo = function() {
     var urlParams = new URLSearchParams(window.location.search);
     var eoDeviceToken = urlParams.get('eo_device_token');
 
-    if (!sample && !eoDeviceToken) {
-        console.warn('URL parameter "eo_device_token" not found. Falling back to sample mode.');
-        sample = true;
+    if (!eoDeviceToken) {
+        console.info('URL parameter "eo_device_token" not found. Falling back to sample mode.');
     }
 
-    var endpointUrl = sample ? 
-        'https://art-api.electricobjects.com/devices/sample' : 
-        'https://art-api.electricobjects.com/devices';
+    var endpointUrl = eoDeviceToken ? 
+        'https://art-api.electricobjects.com/devices' : 
+        'https://art-api.electricobjects.com/devices/sample';
 
     return fetch(endpointUrl, {
         method: 'POST',
