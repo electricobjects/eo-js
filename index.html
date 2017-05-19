@@ -20,30 +20,28 @@
             }
 
             body {
-                width: 50%;
-                height: 50%;
-                overflow-wrap: break-word;
+                width: 80%;
+                max-width: 800px;
                 color: white;
+                font-family: monospace;
+                font-size: 20px;
             }
         </style>
-
     </head>
     <body>
-        <h1>Connected Art Client Library Example</h1>
+        <h1>Connected Art Client Example</h1>
 
-        <div class="js-device-data"></div>
+        <pre class="js-device-data"></pre>
 
         <script src="https://electricobjects.github.io/eo-js/electricobjects.js"></script>
         <script>
             ElectricObjects
                 .fetchDeviceInfo()
                 .then(function(data) {
-                    // Do something with the data
                     document.querySelector('.js-device-data')
-                        .innerHTML = JSON.stringify(data);
+                        .innerHTML = JSON.stringify(data, null, 4);
                 })
                 .catch(function(error) {
-                    // Handle exceptions
                     console.error('Something bad happened', error);
                 });
         </script>
